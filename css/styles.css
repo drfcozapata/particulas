@@ -1,0 +1,255 @@
+/**** @Author: Francisco Zapata ****/
+
+
+/** Reset the document **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-snap-type: x mandatory;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/** Custom Properties **/
+
+:root {
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #222;
+    --verde: #3dff3e;
+}
+
+
+/** Globales **/
+
+body {
+    background-color: #000;
+    color: var(--blanco);
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 2rem;
+    }
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.contenedor {
+    width: 80%;
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    padding: 2rem 3rem;
+}
+
+.webp .header {
+    background-image: url(../img/hacking.webp);
+}
+
+.no-webp .header {
+    background-image: url(../img/hacking.jpg);
+}
+
+.header {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+    opacity: .90;
+}
+
+
+/** HEADER **/
+
+.contenedor {
+    height: calc(100vh - 55px);
+    border: 3px solid var(--gris);
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion {
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .barra-navegacion {
+        padding: 1rem 4rem;
+    }
+}
+
+.barra-navegacion ul li {
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.barra-navegacion li {
+    display: inline-block;
+}
+
+.barra-navegacion .logo {
+    color: var(--verde);
+    font-size: 50px;
+}
+
+.barra-navegacion a {
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: .5s ease;
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .barra-navegacion a {
+        font-size: 2rem;
+    }
+}
+
+.barra-navegacion a:hover:not(.logo) {
+    color: var(--verde);
+    border-bottom: 1px solid currentcolor;
+}
+
+
+/** CONTENIDO **/
+
+.contenido-descripcion {
+    margin-top: 6rem;
+}
+
+.contenido-descripcion .titulo span:first-child {
+    font-size: 4rem;
+    display: block;
+    font-weight: 300;
+}
+
+.contenido-descripcion .titulo span:last-child {
+    font-size: 6rem;
+    font-weight: 900;
+    text-shadow: 3px 3px 5px var(--negro);
+}
+
+.contenido-descripcion .titulo {
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .contenido-descripcion {
+        padding: 0 2.5rem;
+        display: flex;
+        height: 80%;
+        align-items: center;
+    }
+    .contenido-descripcion .titulo {
+        letter-spacing: 3px;
+    }
+    .contenido-descripcion .titulo span:first-child {
+        font-size: 4rem;
+        font-weight: 300;
+    }
+    .contenido-descripcion .titulo span:last-child {
+        font-size: 8rem;
+        font-weight: 900;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenido-descripcion {
+        padding: 0 3.5rem;
+    }
+    .contenido-descripcion .titulo {
+        letter-spacing: 5px;
+    }
+    .contenido-descripcion .titulo span:first-child {
+        font-size: 5rem;
+    }
+    .contenido-descripcion .titulo span:last-child {
+        font-size: 10rem;
+    }
+}
+
+.descripcion {
+    text-shadow: 2px 2px 3px var(--negro);
+}
+
+.contenido-descripcion .btn-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--verde);
+    border: 1px solid var(--gris);
+    animation: parpadeo 2s linear infinite;
+    transition: .7s ease;
+}
+
+.contenido-descripcion .btn-link:hover {
+    border: 1px solid var(--verde);
+    animation: none;
+}
+
+@keyframes parpadeo {
+    0%,
+    41%,
+    45%,
+    47%,
+    49.5%,
+    100% {
+        opacity: 1;
+    }
+    42%,
+    44%,
+    46%,
+    48%,
+    50% {
+        opacity: 0;
+    }
+}
